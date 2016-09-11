@@ -54,7 +54,7 @@ function showBookmarks(nodes) {
 	bmDiv.append('<div style="clear: both;"></div>');
 	for ( var i = 0; i < nodes[0].children.length; i++) {
 		var node = nodes[0].children[i];
-		var tabDiv = $('<div data="' + node.id + '" style="float:left;">'
+		var tabDiv = $('<div data="' + node.id + '" class="bm_tab">'
 				+ node.title + '</div>');
 		tabsDiv.append(tabDiv);
 		var bmUl = $('<ul data="' + node.id + '" class="bm_ul"></ul>');
@@ -65,6 +65,20 @@ function showBookmarks(nodes) {
 		for ( var j = 0; j < node.children.length; j++) {
 			var bm = node.children[j];
 			var li = $('<li><a href="' + bm.url + '">' + bm.title + '</a></li>');
+//			var bi = bm.url.indexOf('http://',0);
+//			if(-1 == bi){
+//				bi = bm.url.indexOf('https://',0);
+//			}
+//			if(-1 != bi){
+//				var ei = bm.url.indexOf('/',8);
+//				var host = bm.url.substring(0,ei+1);
+//				li.css('background','no-repeat');
+//				li.css('background-image','url("chrome://favicon/size/16@1x/'+host+'")');
+//				li.css('background-size','16px');
+//			}
+			li.css('background','no-repeat');
+			li.css('background-image','url("chrome://favicon/size/16@1x/'+bm.url+'")');
+			li.css('background-size','16px');
 			bmUl.append(li);
 		}
 		tabDiv.mouseover(function() {

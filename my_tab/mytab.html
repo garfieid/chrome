@@ -57,17 +57,46 @@ html,body {
 
 #toolDiv{
 	padding: 8px;
+	float: right;
 }
 
 #popDiv{
 	background: #fff;
 	overflow: hidden;
+	float: right;
+	width:618px;
+	box-shadow: -2px 2px 1px #666;
+}
+
+.bm_tab{
+	float: left;
+	font-size: 18px;
+	padding: 5px 10px;
+	margin-right: 10px;
 }
 
 .bm_ul{
-	padding:0;
+	padding:6px 0 0 8px;
 	margin: 0;
+	overflow-y:auto;
+	max-height: 572px;
 }
+
+.bm_ul li{
+	font-size: 14px;
+	margin: 6px 0;
+}
+
+.bm_ul a{
+	text-decoration: none;
+	color: #333;
+	margin-left: 20px;
+}
+
+.bm_ul a:HOVER{
+	text-decoration: underline;
+}
+
 </style>
 <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 <script type="text/javascript" src="js/mytab.js"></script>
@@ -77,6 +106,7 @@ html,body {
 		<div id="toolDiv">
 			<img id="bookMarkBtn" src="img/bookmark.png" width="24px">
 		</div>
+		<div style="clear: both;"></div>
 		<div id="popDiv" style=""></div>
 		<div id="searchDiv" style="visibility: hidden;">
 			<form id="searchForm" action="https://www.google.com/search?hl=zh-CN"
