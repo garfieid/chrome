@@ -4,7 +4,7 @@ $(function() {
 		if ("success" == status) {
 			var url = data.images[0].url;
 			if (url.charAt(0) == '/') {
-				url = "http://s.cn.bing.net" + url;
+				url = "https://www.bing.com" + url;
 			}
 			var title = data.images[0].copyright;
 			$("#bgDiv").attr("title", title);
